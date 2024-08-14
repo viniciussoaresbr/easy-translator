@@ -1,0 +1,76 @@
+<form
+  class="w-full py-5 min-h-[calc(100vh-4rem)] flex justify-center font-Barlow text-xl text-dark"
+  [formGroup]="translatorForm"
+  (ngSubmit)="translate()"
+>
+  <section
+    class="py-10 w-[95%] md:w-4/5 h-4/5 flex flex-col justify-center items-center bg-secondary rounded-lg"
+  >
+    <textarea
+      formControlName="text"
+      placeholder="Type in or paste your text here."
+      class="pl-2 mb-2 resize-none w-5/6 rounded-md bg-light place-content-center placeholder-secondaryDark"
+      id="text"
+      name="text"
+      maxlength="500"
+    ></textarea>
+    <div class="flex items-center gap-2 w-5/6">
+      <select
+        formControlName="startLanguage"
+        name="startLanguage"
+        class="w-1/2 h-12 rounded-md bg-light cursor-pointer"
+      >
+        <option
+          *ngFor="let language of languageOptions"
+          [value]="language.value"
+        >
+          {{ language.label }}
+        </option>
+      </select>
+      <switch-svg (switchEvent)="switchLanguage()"></switch-svg>
+      <select
+        formControlName="finalLanguage"
+        name="finalLanguage"
+        class="w-1/2 h-12 rounded-md bg-light cursor-pointer"
+      >
+        <option
+          *ngFor="let language of languageOptions"
+          [value]="language.value"
+        >
+          {{ language.label }}
+        </option>
+      </select>
+    </div>
+    <div class="flex justify-end m-2 w-5/6">
+      <button
+        [disabled]="translatorForm.invalid"
+        class="bg-dark text-white w-44 h-10 rounded-md disabled:bg-opacity-25 disabled:text-opacity-25"
+        type="submit"
+      >
+        Translate
+      </button>
+    </div>
+
+    <table
+      *ngIf="this.showResult.value"
+      class="p-2 m-2 w-5/6 bg-light border border-secondaryDark"
+    >
+      <tr class="border border-secondaryDark h-12">
+        <th class="w-1/2 border border-secondaryDark">
+          {{ this.displayLanguageLabel(this.translationData.value.source) }}
+        </th>
+        <th class="w-1/2">
+          {{ this.displayLanguageLabel(this.translationData.value.target) }}
+        </th>
+      </tr>
+      <tr class="border border-secondaryDark overflow-ellipsis">
+        <td class="w-1/2 p-2 text-center border border-secondaryDark break-all">
+          {{ this.translationData.value.segment }}
+        </td>
+        <td class="w-1/2 p-2 text-center border border-secondaryDark break-all">
+          {{ this.translationData.value.translation }}
+        </td>
+      </tr>
+    </table>
+  </section>
+</form>
