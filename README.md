@@ -8,29 +8,31 @@ A modern, elegant, and professional translation tool built with **Angular 14** a
 
 ## ✨ Features
 
--   **Modern Dual-Panel UI**: Side-by-side translation panels for desktop and responsive stacked layout for mobile.
--   **Real-time Character Counter**: Keep track of your text length with a built-in 500-character limit.
--   **Smart Language Swap**: Instantly switch between source and target languages, including automatic content swapping.
--   **One-Click Actions**: Quick "Clear Input" and "Copy to Clipboard" buttons for an efficient workflow.
--   **Polished UX**: Smooth loading animations, refined focus states, and professional typography using Inter & Barlow Condensed.
--   **Responsive Design**: Fully optimized for desktops, tablets, and smartphones.
+- **Modern Dual-Panel UI**: Side-by-side translation panels for desktop and responsive stacked layout for mobile.
+- **Real-time Character Counter**: Keep track of your text length with a built-in 500-character limit.
+- **Smart Language Swap**: Instantly switch between source and target languages, including automatic content swapping.
+- **One-Click Actions**: Quick "Clear Input" and "Copy to Clipboard" buttons for an efficient workflow.
+- **Polished UX**: Smooth loading animations, refined focus states, and professional typography using Inter & Barlow Condensed.
+- **Responsive Design**: Fully optimized for desktops, tablets, and smartphones.
 
 ## 🚀 Technologies
 
--   **Frontend**: [Angular 14](https://angular.io/)
--   **Styling**: [TailwindCSS](https://tailwindcss.com/)
--   **Icons**: Custom SVG Components
--   **Fonts**: Inter & Barlow Condensed (Google Fonts)
+- **Frontend**: [Angular 14](https://angular.io/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **Icons**: Custom SVG Components
+- **Fonts**: Inter & Barlow Condensed (Google Fonts)
 
 ## 🛠️ Installation & Setup
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/viniciussoaresbr/easy-translator.git
     cd easy-translator
     ```
 
 2.  **Install dependencies:**
+
     ```bash
     npm install
     ```
@@ -64,10 +66,3 @@ src/
 ├── assets/              # Static assets
 └── environments/        # API configuration
 ```
-
-## 📝 License
-
-This project is open-source. Feel free to use and modify it as you see fit.
-
----
-*Developed with ❤️ by Vinícius Soares*
